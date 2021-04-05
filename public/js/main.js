@@ -39,7 +39,7 @@ function deleteData(id) {
 
     $.ajax({
         type: 'POST',
-        url: "/data/delete",
+        url: "https://cse120-2021-api-ninel.herokuapp.com/data/delete",
         data: tmp,
         cache: false,
         dataType : 'json',
@@ -63,7 +63,7 @@ function saveData() {
 
     $.ajax({
         type: 'POST',
-        url: "/data",
+        url: "https://cse120-2021-api-ninel.herokuapp.com/data",
         data: tmp,
         cache: false,
         dataType : 'json',
@@ -82,7 +82,7 @@ function saveData() {
 function loadExistingData() {
     $.ajax({
         type : "GET",
-        url : "/data",
+        url : "https://cse120-2021-api-ninel.herokuapp.com/data",
         dataType : "json",
         success : function(data) {
         	console.log("success", data);
