@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="		crossorigin="anonymous"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="myBooks">MY BOOKS</div>
+    <h4>Hello! Please fill out the questionnaire :)</h4>
+  
+    <form id=booksContainer  onsubmit="handleFormSubmitBooks()">
+
+    <label for="fnamebook">Full Name:<span class="text-red">*</span></label><br>
+    <input onchange="handleFullNameBookChange(this)" type="text" id="fnamebook"  placeholder="Your answer"><br>
+    
+    <label for="titlebook">Title:<span class="text-red">*</span></label><br>
+    <input onchange="handleTitleBookChange(this)" type="text" id="titlebook"  placeholder="Your answer"><br>
+      
+    <label for="authorbook">Author:<span class="text-red">*</span></label><br>
+    <input onchange="handleAuthorChange(this)" type="text" id="authorbook"  placeholder="Your answer"><br>
+    
+    <label for="colourbook">Colour:</label><br>
+    <input onchange="handleColourChange(this)" type="text" id="colour"  placeholder="Your answer"><br>
+    
+    
+    <div class="form-check">
+      <label>Book Cover: </label><br>
+
+      <input onclick="handleRadioBookChange(this)" class="form-check-input"   type="radio" name="hasFoodAllergies" id="yesRadio" value="handcover">
+      <label class="form-check-label" for="yesRadio">
+        Handcover
+      </label>
+    </div>
+    <div class="form-check">
+      <input checked onclick="handleRadioBookChange(this)" class="form-check-input" type="radio" name="hasFoodAllergies" id="noRadio" value="paper Back">
+      <label class="form-check-label" for="noRadio">
+        Paper Back
+      </label>
+    </div>
+
+
+
+    <label for="numberOfPages">Number Of Pages:</label><br>
+    <input onchange="handleNumberOfPagesChange(this)" type="text" id="numbreofpages" placeholder="Your answer"><br>
+    
+    <label for="price">Price:</label><br>
+    <input onchange="handlePriceChange(this)" type="text" id="price" placeholder="Your answer"><br>
+    
+    <label for=currency">Currency:</label><br>
+    <input onchange="handleCurrencyChange(this)" type="text" id="currency" placeholder="Your answer"><br>
+      
+    <label for="language">Language:</label><br>
+    <input onchange="handleLanguageChange(this)" type="text" id="language" placeholder="Your answer"><br>
+
+    <button class = "submit_button" type="submit">submit</button> 
+    <br />
+    <a href="admin.html">Go to admin</a>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

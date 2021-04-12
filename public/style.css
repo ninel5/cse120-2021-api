@@ -1,0 +1,211 @@
+h1{
+  color:white;
+}
+
+h4{
+  font-size: 20px;
+  color:white;
+}
+
+b{
+  font-size: 20px;
+  color:white;
+}
+
+input{
+  border-radius: 5px;
+  border-style: none;
+  padding:.5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+body{
+  background-image: url(bodywallpaper.jpeg);
+  background-size: auto;
+}
+
+#myBooks{
+  font-size: 40px;
+  color: white;
+  margin-left: 1.5em;
+}
+
+  #container{
+    display: grid;
+    justify-content: center;
+    grid-gap: 1em;
+  }
+
+  #result{
+    display: flex;
+    background-color: rgba(60, 60, 61, 0);
+    border-radius: 10px;
+    width:60em;
+    justify-content: center;
+    margin-bottom: 3em;
+    
+  }
+
+  #result>h1{
+    font-size:100px;
+  }
+
+  .title{
+    display: grid;
+    background-color: rgba(1, 65, 184, 0.795);
+    border-radius: 10px;
+    width:60em;
+    justify-content: center;
+    
+  }
+
+  .sectionItem{
+    display: grid;
+    margin: .5em;
+    background-color: rgba(16, 170, 2, 0.815);
+    border-radius: 10px;
+    padding: .5em;
+    width: 40em;
+
+  }
+
+  #cookies{
+    display: grid;
+    justify-content: center;
+  }
+
+  #books{
+    display: grid;
+    justify-content: center;
+  }
+
+  .changeButtons{
+    margin-top: .5em;
+    display: inline;
+  }
+ 
+  .changeButtons>input{
+    padding: .5em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.693);
+    color:  white;
+    border-style: none;
+  }
+
+  #others{
+    display: grid;
+    justify-content: center;
+  }
+
+  #others>button{
+    width: 10em;
+    margin: .1em;
+    padding:1em;
+    font-size: 20px;
+    background-color: rgba(240, 74, 45, 0.686);
+    border-style: none;
+    border-radius: 10px;
+  }
+
+  .title{
+    justify-content: center;
+  }
+
+#submits{
+display: flex;
+margin: .5em;
+justify-content: flex-end;
+}
+
+#submits>button{
+  color: azure;
+  margin-right: .5em;
+  padding:1em;
+  font-size: 15px;
+  background-color: rgba(242, 63, 31, 0.796);
+  border-style: none;
+  border-radius: 10px;
+}
+
+#userId{
+  width: max-content;
+  margin-bottom: .5em;
+  font-size:x-large;
+  background-color: rgb(2, 49, 177);
+  color: rgb(255, 255, 255);
+  padding: .5em;
+  border-radius: 5px;
+}
+
+#changeArea{
+  width: max-content;
+  border-radius: 5px;
+  background-color: rgb(0, 158, 21);
+  padding:.3em;
+  margin-left:1.7em;
+  font-size:large;
+
+}
+
+#changeArea>input{
+  margin:.3em;
+  margin-left:2em;
+  padding: .5em;
+  border-radius: 5px;
+  border-style: none;
+  
+
+}
+#changeArea>button{
+padding: .5em;
+margin: .5em;
+background-color: rgba(0, 0, 0, 0.802);
+border-radius: 5px;
+border-style: none;
+color: white;
+}
+
+.submit_button{
+  padding: .5em;
+  border-radius: 5px;
+  border-style: none;
+  
+  margin-bottom: 1em;
+}
+
+#booksContainer{
+  margin-top: 1em;
+  margin-left: 4em;
+}
+
+#booksContainer>input{
+  padding: .5em;
+  border-radius: 5px;
+  margin-top: .5em;
+}
+
+.text-red{
+  color:red
+}
+
+#additionalInfo{
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: none;
+}
+#allergiesDescription{
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: none;
+}
+
+.wrapper{
+  margin-left: 3em;
+}
+
+.form-check{
+  margin-top:.5em;
+  margin-bottom: .5em;
+}
+
