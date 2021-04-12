@@ -310,6 +310,8 @@ function editData(id) {
 function saveChanges() {
     var storage = window.localStorage;
     
+    editUser = JSON.parse(storage.getItem("editItem"))
+    
     editUser["id"] = document.getElementById("userId")
     editUser["fname"] = document.getElementById("fname").value
     editUser["address"] = document.getElementById("email").value
