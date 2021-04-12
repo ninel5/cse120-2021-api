@@ -310,7 +310,7 @@ function editData(id) {
 function saveChanges() {
     var storage = window.localStorage;
     
-    editUser["_id"] = document.getElementById("userId")
+    editUser["id"] = document.getElementById("userId")
     editUser["fname"] = document.getElementById("fname").value
     editUser["address"] = document.getElementById("email").value
     editUser["birthdate"] = document.getElementById("birthdate").value
