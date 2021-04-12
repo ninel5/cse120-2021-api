@@ -325,7 +325,7 @@ function saveChanges() {
     editUser["pans"] = document.getElementById("pans").value
     
     $.ajax({
-        type: 'PUT',
+        type: 'POST',
         url: "https://cse120-2021-api-ninel.herokuapp.com/data/update",
         data: editUser,
         cache: false,
