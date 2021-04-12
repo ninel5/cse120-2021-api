@@ -326,6 +326,8 @@ function saveChanges() {
     editUser["chocolate"] = document.getElementById("chocolate").value
     editUser["pans"] = document.getElementById("pans").value
     
+    console.log(editUser);
+    
     $.ajax({
         type: 'POST',
         url: "https://cse120-2021-api-ninel.herokuapp.com/data/update",
