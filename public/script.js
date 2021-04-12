@@ -282,7 +282,7 @@ function editDataItem() {
     editUser = JSON.parse(storage.getItem("editItem"))
     document.getElementById("userId").innerHTML += editUser["_id"]
     document.getElementById("fname").value = (editUser["fname"] || "-")
-    document.getElementById("email").value = (editUser["address"]  || "-")  
+    document.getElementById("email").value = (editUser["eaddress"]  || "-")  
     document.getElementById("birthdate").value = (editUser["birthdate"] || "-")  
     document.getElementById("startcooking").value = (editUser["startCookingAnswer"] || "-")
     document.getElementById("allergies").value = (editUser["allergies"] || "-")
@@ -314,7 +314,7 @@ function saveChanges() {
     
     editUser["id"] = editUser["_id"]
     editUser["fname"] = document.getElementById("fname").value
-    editUser["address"] = document.getElementById("email").value
+    editUser["eaddress"] = document.getElementById("email").value
     editUser["birthdate"] = document.getElementById("birthdate").value
     editUser["startCookingAnswer"] = document.getElementById("startcooking").value
     editUser["allergies"] = document.getElementById("allergies").value
