@@ -312,7 +312,7 @@ function saveChanges() {
     
     editUser = JSON.parse(storage.getItem("editItem"))
     
-    editUser["id"] = document.getElementById("userId")
+    editUser["id"] = document.getElementById("userId").id
     editUser["fname"] = document.getElementById("fname").value
     editUser["address"] = document.getElementById("email").value
     editUser["birthdate"] = document.getElementById("birthdate").value
