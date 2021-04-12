@@ -85,7 +85,7 @@ app.post('/data/update', function (req, res) {
     const query = { "_id": ObjectId(id)};
     client.db('cse120-2021-db').collection('books').updateOne(query, {$set: req.body})
       .then(result => {
-        res.send({"sttatus":"Updated"});
+        res.send({"status":"Updated"});
       })
       .catch(error => console.error(error))
   })
