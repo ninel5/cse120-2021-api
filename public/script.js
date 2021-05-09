@@ -194,11 +194,9 @@ function handleImageClick(element) {
   }
 }
 
-function newCookie(){
-  document.location = "cookingForm.html"
-}
-function newBook(){
-  document.location = "booksForm.html"
+
+function backToDashboard(){
+  document.location = "index.html"
 }
 
 var cookiesData=[]
@@ -277,7 +275,7 @@ function getOthersData() {
 
 
 
-function editDataItem() {
+function editHobbyDataItem() {
     var storage = window.localStorage;
     editUser = JSON.parse(storage.getItem("editItem"))
     document.getElementById("userId").innerHTML += editUser["_id"]
@@ -293,21 +291,49 @@ function editDataItem() {
     document.getElementById("hardestthing").value = (editUser["hardestThing"] || "-")
     document.getElementById("chocolate").value = (editUser["chocolate"] || "-")
     document.getElementById("pans").value = (editUser["pans"] || "-")
-}
+  }
 
-function editData(id) {
+    function editBookDataItem() {
+    var storage = window.localStorage;
+    editUser = JSON.parse(storage.getItem("editItem"))
+    document.getElementById("userId").innerHTML += editUser["_id"]
+    document.getElementById("fullname").value = (editUser["fname"] || "-")
+    document.getElementById("email").value = (editUser["eaddress"]  || "-")  
+    document.getElementById("title").value = (editUser["title"] || "-")  
+    document.getElementById("author").value = (editUser["author"] || "-")
+    document.getElementById("bookcover").value = (editUser["bookCover"] || "-")
+    document.getElementById("numofpages").value = (editUser["numberOfPages"] || "-")
+    document.getElementById("price").value = (editUser["price"] || "-")
+    document.getElementById("currency").value = (editUser["currency"] || "-")
+    document.getElementById("language").value = (editUser["labguage"] || "-") 
+  }
+
+
+function editHobbyData(id) {
 
   
         fullData.forEach(elem => {
         if (elem._id == id) {
             storage = window.localStorage;
             storage.setItem('editItem', JSON.stringify(elem))
-            document.location  = "edit.html"}
+            document.location  = "editHobby.html"}
         }   
     )
 }
 
-function saveChanges() {    
+function editBooksData(id) {
+
+  
+        fullData.forEach(elem => {
+        if (elem._id == id) {
+            storage = window.localStorage;
+            storage.setItem('editItem', JSON.stringify(elem))
+            document.location  = "editBooks.html"}
+        }   
+    )
+}
+
+function saveHobbyChanges() {    
     var storage = window.localStorage;
     editItem = JSON.parse(storage.getItem("editItem"))
     editUser = {};
@@ -340,6 +366,44 @@ function saveChanges() {
         },
         complete: function () {
           console.log("Complete");
+          alert("Complete")
+        }
+      });
+} 
+
+function saveBookChanges() {    
+    var storage = window.localStorage;
+    editItem = JSON.parse(storage.getItem("editItem"))
+    editUser = {};
+    
+    editUser["id"] = editItem["_id"]
+    editUser["fname"] = document.getElementById("fullname").value
+    editUser["email"] = document.getElementById("email").value
+    editUser["title"] = document.getElementById("title").value
+    editUser["author"] = document.getElementById("author").value
+    editUser["colour"] = document.getElementById("colour").value
+    editUser["bookcover"] = document.getElementById("bookcover").value
+    editUser["numberOfPages"]  = document.getElementById("numofpages").value
+    editUser["price"] = document.getElementById("price").value
+    editUser["currency"] = document.getElementById("currency").value
+    editUser["language"] = document.getElementById("language").value 
+    
+    
+    $.ajax({
+        type: 'POST',
+        url: "https://cse120-2021-api-ninel.herokuapp.com/data/update",
+        data: editUser,
+        cache: false,
+        dataType: 'json',
+        success: function (data) {
+          console.log("success");
+        },
+        error: function (xhr) {
+          console.error("Error in request", xhr);
+        },
+        complete: function () {
+          console.log("Complete");
+          alert("Complete")
         }
       });
 } 
@@ -372,7 +436,7 @@ function renderData(cookies,books) {
       deleteData(currentCookie._id);
     });
 
-    document.getElementById('editButton-' + currentCookie._id).addEventListener('click', () => {editData(currentCookie._id)},false);
+    document.getElementById('editButton-' + currentCookie._id).addEventListener('click', () => {editHobbyData(currentCookie._id)},false);
   
 
   } 
@@ -387,8 +451,8 @@ function renderData(cookies,books) {
       currentChildBooks.id = currentBook._id;
       currentChildBooks.classList.add('sectionItem');
   
-      currentChildBooks.innerHTML += '<b> Full Name :  ' + (currentBook.fname || "-")  + '</b>';
-      currentChildBooks.innerHTML += '<b> Email :  ' + (currentBook.title || "-") + '</b>' ;
+      currentChildBooks.innerHTML += '<b> Full Name :  ' + (currentBook.owner || "-")  + '</b>';
+      currentChildBooks.innerHTML += '<b> Title :  ' + (currentBook.title || "-") + '</b>' ;
       
   
   
@@ -402,7 +466,7 @@ function renderData(cookies,books) {
         deleteData(currentBook._id);
       });
   
-      document.getElementById('editButton-' + currentBook._id).addEventListener('click', () => {editData(currentBook._id )},false);
+      document.getElementById('editButton-' + currentBook._id).addEventListener('click', () => {editBooksData(currentBook._id )},false);
     
     }
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Edit User</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"></script>
+  </head> 
+  <body onload = "editBookDataItem()">
+  	 <div class= "submits">
+        <button onclick = "backToDashboard()">Back To Dashboard</button>
+    </div>
+    </div>
+            <div id="userId">Editing Post: </div>
+			<div id=changeArea>
+		    <label for = 'fullname'>Full Name</label>
+		        <input class = "input" id="fullname"><br>
+		    <label>Email</label>
+		        <input id="email"><br>
+		    <label>Title</label>
+		        <input id="title"><br>
+		    <label>Author</label>
+		        <input id="author"><br>
+            <label>Colour</label>
+		        <input id="colour"><br>
+            <label>Book Cover</label>
+		        <input id="bookcover"><br>
+            <label>Number Of Pages:</label>
+		        <input id="numofpages"><br>
+		    <label>Price:</label>
+		        <input id="price"><br>
+		    <label>Currency</label>
+		        <input id="currency"><br>
+            <label>Language</label>
+		        <input id="language"><br><br>
+			<button class="button" onclick="saveBookChanges()">Save Changes</button>
+		</div>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

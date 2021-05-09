@@ -112,13 +112,13 @@ body{
     justify-content: center;
   }
 
-#submits{
+.submits{
 display: flex;
 margin: .5em;
 justify-content: flex-end;
 }
 
-#submits>button{
+.submits>button{
   color: azure;
   margin-right: .5em;
   padding:1em;
