@@ -4,7 +4,9 @@
    <title>Ninul's Dashboard</title>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="685408095879-kdbor965f4f3kuqm7td69r4i8o5po5cb.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <header>
@@ -15,12 +17,12 @@
     
     <div>
       <h3>Login:</h3>
-      <div class="g-signin2" data-onsuccess="onSignIn" data-ux_mode="redirect"></div>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <div>
     </div>
     <script>
       function onSignIn() {
-        window.location.href = `${window.location.href}/dashboard.html`;
+        window.location.href = `${window.location.href}dashboard.html`;
       }
     </script>
   </body>
