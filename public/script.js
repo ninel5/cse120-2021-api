@@ -196,7 +196,7 @@ function handleImageClick(element) {
 
 
 function backToDashboard(){
-  document.location = "index.html"
+  document.location = "/"
 }
 
 var cookiesData=[]
